@@ -1,5 +1,8 @@
 # Google Cloud Functions
 
+snippets while following allong [YouTube](https://www.youtube.com/watch?v=RitskkjSih0)
+source at [packagemain/15-google-cloud-functions-in-go/api at master · plutov/packagemain · GitHub](https://github.com/plutov/packagemain/tree/master/15-google-cloud-functions-in-go/api)
+
 ```sh
 # setup gcloud
 gcloud services enable cloudfunctions.googleapis.com
@@ -27,6 +30,7 @@ gcloud functions logs read consumer
 # teardown
 gcloud functions delete api
 gcloud functions delete consumer
+gcloud pubsub topics delete randomNumbers
 ```
 
 ## go mod
