@@ -95,7 +95,7 @@ func FetchAndResizeImage(p *ResizeParams) (*image.Image, error) {
 	return &dst, nil
 }
 
-func EncodeImageToJpg(image *image.Image) (*byte.Buffer, error) {
+func EncodeImageToJpg(img *image.Image) (*bytes.Buffer, error) {
 	encoded := &bytes.Buffer{}
 	err := jpeg.Encode(encoded, *img, nil)
 	return encoded, err
