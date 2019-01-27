@@ -85,7 +85,7 @@ func FetchAndResizeImage(p *ResizeParams) (*image.Image, error) {
 
 	//decode input data to image
 	src, _, err := image.Decode(response.Body)
-	if err != nil {
+	if err != nil {
 		return &dst, err
 	}
 
