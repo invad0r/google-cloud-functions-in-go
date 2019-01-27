@@ -15,8 +15,21 @@ gcloud alpha functions deploy api \
     --runtime go111 \
     --trigger-http \
     --set-env-vars PROJECT_ID=principal-fact-205806
+
+gcloud functions deploy consumer \
+    --entry-point Consume \
+    --runtime go111 \
+    --trigger-topic=randomNumbers
+
+
+gcloud functions logs read consumer
+
+# teardown
+gcloud functions delete api
+gcloud functions delete consumer
 ```
 
+## go mod
 ```sh
 cd api/
 export GO111MODULE=on

@@ -16,22 +16,22 @@ func Send(w http.ResponseWriter, r *http.Request) {
 	client, err := pubsub.NewClient(ctx, os.Getenv("PROJECT_ID"))
 	if err != nil {
 		w.WriteHeader(http.StatusInternalServerError)
-		w.Write([]byte)
+		w.Write([]byte(err.Error()))
 		return
 	}
 
 	topic := client.Topic("randomNumbers")
 
-	rand.Seed(time.Now().UnixNano)
+	rand.Seed(time.Now().UnixNano())
 
 	res := topic.Publish(ctx, &pubsub.Message{
-		Data: []byte(strconv.Itoa(random.Intn(1000))),
+		Data: []byte(strconv.Itoa(rand.Intn(1000))),
 	})
 
 	id, err := res.Get(ctx)
 	if err != nil {
 		w.WriteHeader(http.StatusInternalServerError)
-		w.Write([]byte)
+		w.Write([]byte(err.Error()))
 		return
 	}
 
