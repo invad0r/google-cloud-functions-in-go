@@ -1,7 +1,9 @@
 # Google Cloud Functions
 
-snippets while following allong [YouTube](https://www.youtube.com/watch?v=RitskkjSih0)
+snippets while following allong two examples using google cloud functions:
+- [YouTube](https://www.youtube.com/watch?v=RitskkjSih0)
 source at [packagemain/15-google-cloud-functions-in-go/api at master · plutov/packagemain · GitHub](https://github.com/plutov/packagemain/tree/master/15-google-cloud-functions-in-go/api)
+- [Image Resizing with Go and Cloud Functions – Adil H – Medium](https://medium.com/@didil/image-resizing-with-go-and-cloud-functions-792a47e6473d)
 
 ```sh
 # setup gcloud
@@ -31,6 +33,12 @@ gcloud functions logs read consumer
 gcloud functions delete api
 gcloud functions delete consumer
 gcloud pubsub topics delete randomNumbers
+```
+
+```sh
+gcloud functions deploy ResizeImage --runtime go111 --trigger-http
+
+curl 'https://us-central1-principal-fact-205806.cloudfunctions.net/ResizeImage?url=https://github.com/didil/gcf-go-image-resizer/raw/master/example/gopherizeme_orig.jpg&width=10&height=10'
 ```
 
 ## go mod

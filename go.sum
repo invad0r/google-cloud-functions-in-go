@@ -1,0 +1,6 @@
+github.com/disintegration/imaging v1.5.0 h1:uYqUhwNmLU4K1FN44vhqS4TZJRAA4RhBINgbQlKyGi0=
+github.com/disintegration/imaging v1.5.0/go.mod h1:9B/deIUIrliYkyMTuXJd6OUFLcrZ2tf+3Qlwnaf/CjU=
+github.com/invad0r/google-cloud-functions-in-go/image_resizer v0.0.0-20190127200846-9cb7064f162e h1:aOXU4JA9EnBaZQsXSnTERfH+FzJRtjyzYns5xJy9tDs=
+github.com/invad0r/google-cloud-functions-in-go/image_resizer v0.0.0-20190127200846-9cb7064f162e/go.mod h1:lubjXT1m9H5XVYq/E8Mz1jh5OQ3HQ8RwUfXVBtLq/qs=
+golang.org/x/image v0.0.0-20190118043309-183bebdce1b2 h1:FNSSV4jv1PrPsiM2iKGpqLPPgYACqh9Muav7Pollk1k=
+golang.org/x/image v0.0.0-20190118043309-183bebdce1b2/go.mod h1:ux5Hcp/YLpHSI86hEcLt0YII63i6oz57MZXIpbrjZUs=
